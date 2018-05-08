@@ -1,0 +1,28 @@
+.lazy-image {
+  width: 100%;
+  filter: blur(25px);
+}
+
+.lazy-image.loaded {
+  filter: blur(0px);
+  animation: unblur 0.75s 1 ease-in-out;
+  backface-visibility: hidden;
+}
+
+@keyframes unblur {
+  0% {
+    filter: blur(25px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+// Progressive Map
+.progressive-map {
+  position: relative;
+  margin: 20px auto;
+  max-width: 1000px;
+  width: 100%;
+  overflow: hidden;
+}

@@ -1,65 +1,63 @@
-html,
-body,
-#app {
-  padding: 0;
+/* Critical */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  letter-spacing: 0em;
-  font-family: "Avenir Next", "Helvetica Neue", sans-serif;
-  line-height: 1.55rem;
-  font-feature-settings: "liga" 1, "calt" 0;
-}
-
-/* header */
-header.top-nav {
-  z-index: 1;
-  background-color: $blue;
-  width: 100%;
-}
-
-@media (max-width: 600px) {
-  .toolbar-title {
-    display: none;
-  }
-}
-
-.top-nav-title,
-.top-nav-link {
-  color: $white;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-/* map view */
-.main,
-.webmap {
   padding: 0;
+  font-family: sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-header {
+  height: 100vh;
+  width: 100%;
+  background-color: #a28089;
+  color: #fff;
+}
+
+.App-header .lazy-image {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.App-title {
+  display: table-cell;
+  position: absolute;
   margin: 0;
+  padding: 15px;
+  font-size: 5rem;
+  z-index: 10;
+  text-align: center;
+  top: 50%;
   width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
-.main {
-  flex-direction: column;
-}
+/* Not Critical */
 
-.esri-view-root {
+.container {
+  margin: auto;
   width: 100%;
-  height: 100%;
+  max-width: 1000px;
 }
 
-/* Fix for some calcite styles */
-.esri-widget {
-  h3 {
-    font-size: 1rem;
-  }
-  li {
-    margin: 0;
-  }
+.narrative-text {
+  margin: auto;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  text-align: left;
+  font-size: 1.4rem;
+  line-height: 2rem;
 }

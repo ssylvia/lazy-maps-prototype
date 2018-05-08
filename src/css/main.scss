@@ -1,6 +1,5 @@
-$image-path: "~calcite-web/dist/img" !default;
-$font-path: "~calcite-web/dist/fonts" !default;
+// $image-path: '~calcite-web/dist/img' !default;
+// $font-path: '~calcite-web/dist/fonts' !default;
 
-@import "~calcite-web/dist/sass/calcite-web-no-fonts";
-@import "~arcgis-js-api/themes/light/main.css";
-@import "index";
+// @import '~calcite-web/dist/sass/calcite-web-no-fonts';
+@import 'index';
