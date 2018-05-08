@@ -1,6 +1,7 @@
 const ArcGISPlugin = require("@arcgis/webpack-plugin");
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CompressionPlugin = require("compression-webpack-plugin");
 
 const path = require("path");
 const webpack = require("webpack");
@@ -22,7 +23,8 @@ module.exports = {
         use: {
           loader: "babel-loader",
           options: {
-            cacheDirectory: true
+            cacheDirectory: true,
+            plugins: ["syntax-dynamic-import"]
           }
         }
       },
@@ -45,7 +47,9 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: "[name].css",
       chunkFilename: "[id].css"
-    })
+    }),
+    // compress assets so that they can be served as gzip files
+    new CompressionPlugin()
   ],
 
   resolve: {
