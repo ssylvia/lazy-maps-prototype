@@ -1,5 +1,4 @@
 import React from 'react';
-import './LazyImage/style.scss';
 
 export default class LazyImage extends React.Component {
   constructor(props) {

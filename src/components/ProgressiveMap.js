@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react';
 import LazyImage from './LazyImage';
 import { WebMapComponent } from './webmapview';
-import './ProgressiveMap/style.scss';
+
+// lazy load the map CSS too
+import '../css/ProgressiveMap';
 
 export default class ProgressiveMap extends React.Component {
   constructor(props) {
@@ -54,7 +56,7 @@ export default class ProgressiveMap extends React.Component {
 
     const onComponentLoad = container => {
       // lazy-load the map util & ArcGIS API for JavaScript bundles
-      import('../../util/map').then(mapUtils => {
+      import('../util/map').then(mapUtils => {
         // add it to a map
         const webmap = mapUtils.newWebMap({
           portalItem: {
